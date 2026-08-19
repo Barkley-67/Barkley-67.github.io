@@ -1,231 +1,244 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Programme Barkley à Molsheim | Habiletés parentales</title>
-  <meta name="description" content="Programme d'entraînement aux habiletés parentales de type Barkley à Molsheim. 6 séances en groupe pour les parents d'enfants présentant des difficultés d'attention, d'impulsivité ou d'opposition. Démarrage le 2 octobre 2026.">
-  <meta name="keywords" content="Barkley Molsheim, programme Barkley Alsace, habiletés parentales Molsheim, Barkley Bas-Rhin, TDAH Molsheim, impulsivité enfant, opposition enfant, psychomotricité Molsheim">
-  <meta name="robots" content="index, follow">
-  <meta property="og:title" content="Programme Barkley à Molsheim">
-  <meta property="og:description" content="Programme d'entraînement aux habiletés parentales de type Barkley à Molsheim. Démarrage le 2 octobre 2026.">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="fr_FR">
-  <meta property="og:image" content="flyer-barkley-molsheim.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programme Barkley – Accompagnement parental en Alsace</title>
+  <meta name="description" content="Programme Barkley d'accompagnement parental à Molsheim et alentours, proposé par deux psychomotriciennes diplômées d'État formées à l'approche Barkley.">
   <style>
-    :root {
-      --blue: #155fa8;
-      --dark: #18202b;
-      --green: #d9f1cb;
-      --soft: #f4f8fc;
-      --accent: #09a0bd;
-    }
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--dark);
-      background: var(--soft);
+      font-family: Arial, Helvetica, sans-serif;
+      color: #263238;
+      background: #f7faf9;
       line-height: 1.6;
     }
+    header {
+      background: white;
+      padding: 18px 7%;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 1px 8px rgba(0,0,0,.08);
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    nav strong { font-size: 1.15rem; }
+    nav a {
+      color: #355c57;
+      text-decoration: none;
+      margin-left: 18px;
+      font-weight: 600;
+    }
     .hero {
-      padding: 56px 20px 42px;
-      text-align: center;
-      background: linear-gradient(135deg, #d9f1cb 0%, #eef8ff 55%, #d7eef3 100%);
+      max-width: 1100px;
+      margin: 45px auto 25px;
+      padding: 45px 7%;
+      background: #e8f1ef;
+      border-radius: 24px;
     }
     .hero h1 {
-      max-width: 850px;
-      margin: 0 auto 16px;
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      line-height: 1.08;
-      color: #171d8f;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      line-height: 1.15;
+      margin: 0 0 18px;
+      color: #294f4a;
     }
-    .hero p {
-      max-width: 720px;
-      margin: 0 auto 24px;
-      font-size: 1.15rem;
-    }
-    .cta {
+    .hero p { font-size: 1.15rem; max-width: 760px; }
+    .button {
       display: inline-block;
+      margin-top: 12px;
       padding: 13px 22px;
-      margin: 5px;
       border-radius: 999px;
-      background: var(--blue);
+      background: #355c57;
       color: white;
       text-decoration: none;
-      font-weight: 700;
+      font-weight: bold;
     }
-    .cta.secondary {
-      background: white;
-      color: var(--blue);
-      border: 2px solid var(--blue);
-    }
-    main {
-      max-width: 1050px;
+    section {
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 34px 18px 60px;
+      padding: 55px 7%;
+    }
+    h2 {
+      color: #294f4a;
+      font-size: 2rem;
+      margin-top: 0;
     }
     .intro {
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto 34px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 2px 14px rgba(0,0,0,.06);
     }
-    .intro h2, .contact h2 {
-      color: var(--blue);
-      font-size: 1.9rem;
-      margin-bottom: 10px;
+    .professionnelles {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      margin-top: 28px;
+    }
+    .personne {
+      background: white;
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 2px 14px rgba(0,0,0,.06);
+      text-align: center;
+    }
+    .personne img {
+      width: 180px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 18px;
+      display: block;
+      margin: 0 auto 18px;
+    }
+    .personne h3 { margin: 8px 0 4px; color: #294f4a; }
+    .badge {
+      display: inline-block;
+      margin: 12px 0;
+      padding: 7px 13px;
+      border-radius: 999px;
+      background: #edf4f2;
+      color: #355c57;
+      font-weight: 600;
     }
     .cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin: 28px 0 40px;
+      gap: 20px;
     }
     .card {
       background: white;
       border-radius: 18px;
       padding: 24px;
-      box-shadow: 0 6px 24px rgba(20, 50, 80, .08);
-    }
-    .card h3 { margin-top: 0; color: #111; }
-    .card strong { color: var(--blue); }
-    .flyer {
-      text-align: center;
-      margin: 42px auto;
-    }
-    .flyer img {
-      width: min(100%, 850px);
-      height: auto;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(20, 50, 80, .14);
+      box-shadow: 0 2px 14px rgba(0,0,0,.05);
     }
     .contact {
-      background: var(--green);
+      background: #e8f1ef;
       border-radius: 24px;
-      padding: 32px 24px;
-      text-align: center;
-      margin-top: 40px;
-    }
-    .contacts {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 18px 42px;
-      margin-top: 20px;
-    }
-    .person { min-width: 240px; }
-    .person h3 { margin-bottom: 4px; }
-    .person a {
-      color: var(--blue);
-      font-weight: 650;
-      text-decoration: none;
-    }
-    .small {
-      font-size: .94rem;
-      color: #536170;
     }
     footer {
       text-align: center;
-      padding: 24px 18px 40px;
-      font-size: .9rem;
-      color: #667381;
+      padding: 30px 7%;
+      background: #294f4a;
+      color: white;
     }
-    @media (max-width: 760px) {
-      .cards { grid-template-columns: 1fr; }
-      .hero { padding-top: 40px; }
+    @media (max-width: 750px) {
+      .professionnelles, .cards { grid-template-columns: 1fr; }
+      nav { flex-direction: column; }
+      nav a { margin: 0 8px; }
+      .hero { margin: 20px 12px; }
+      section { padding: 40px 7%; }
     }
   </style>
 </head>
 <body>
-  <header class="hero">
-    <h1>Programme d’entraînement aux habiletés parentales de type Barkley</h1>
+
+<header>
+  <nav>
+    <strong>Programme Barkley</strong>
+    <div>
+      <a href="#programme">Le programme</a>
+      <a href="#equipe">Qui sommes-nous ?</a>
+      <a href="#inscriptions">Renseignements</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="hero">
+    <h1>Programme Barkley<br>pour les parents</h1>
     <p>
-      Un programme en petit groupe à <strong>Molsheim</strong> pour aider les parents
-      à mieux comprendre les difficultés de comportement de leur enfant et à développer
-      des outils concrets pour le quotidien.
+      Un accompagnement parental structuré pour mieux comprendre les difficultés
+      de l'enfant et développer des stratégies concrètes au quotidien.
+      Le programme est proposé à Molsheim et dans les environs.
     </p>
-    <a class="cta" href="#contact">Nous contacter</a>
-    <a class="cta secondary" href="#programme">Voir le programme</a>
-  </header>
+    <a class="button" href="#inscriptions">Renseignements et inscriptions</a>
+  </div>
 
-  <main>
-    <section class="intro" id="programme">
-      <h2>Un accompagnement concret pour les parents</h2>
-      <p>
-        Le programme s’adresse aux parents d’enfants présentant des difficultés
-        d’attention, d’impulsivité ou d’opposition, avec ou sans diagnostic posé.
-        L’objectif : repartir avec des stratégies concrètes pour un quotidien plus serein.
-      </p>
-    </section>
+  <section id="equipe" class="intro">
+    <h2>Qui sommes-nous ?</h2>
+    <p>
+      Nous sommes deux <strong>psychomotriciennes diplômées d'État</strong>,
+      formées à l'<strong>approche Barkley</strong>.
+    </p>
+    <p>
+      Nous avons choisi de proposer ce programme avec une volonté simple :
+      offrir aux parents un accompagnement sérieux, structuré et concret,
+      fondé sur les connaissances actuelles et les recommandations de bonnes
+      pratiques professionnelles.
+    </p>
 
-    <section class="cards" aria-label="Informations pratiques">
-      <article class="card">
-        <h3>📍 Où ?</h3>
-        <p><strong>Molsheim</strong><br>
-        Cabinet de psychomotricité</p>
+    <div class="professionnelles">
+      <article class="personne">
+        <img src="photo-lucile.jpg" alt="Lucile, psychomotricienne diplômée d'État">
+        <h3>Lucile</h3>
+        <span class="badge">Psychomotricienne diplômée d'État</span>
+        <p>Formée à l'approche Barkley.</p>
       </article>
 
-      <article class="card">
-        <h3>📅 Quand ?</h3>
-        <p><strong>Démarrage le 2 octobre 2026</strong><br>
-        Les vendredis de 17h à 19h</p>
+      <article class="personne">
+        <img src="photo-elodie.jpeg" alt="Élodie, psychomotricienne diplômée d'État">
+        <h3>Élodie</h3>
+        <span class="badge">Psychomotricienne diplômée d'État</span>
+        <p>Formée à l'approche Barkley.</p>
       </article>
+    </div>
+  </section>
 
-      <article class="card">
-        <h3>👥 Comment ?</h3>
-        <p><strong>6 séances de 2 heures</strong><br>
-        Une séance par quinzaine, en semaines paires.</p>
-      </article>
-    </section>
-
-    <section class="card">
-      <h2>Pour qui ?</h2>
-      <p>
-        Pour les parents d’enfants présentant des difficultés d’attention,
-        d’impulsivité ou d’opposition, avec ou sans diagnostic posé.
-      </p>
-      <p>
-        Le programme propose des stratégies concrètes pour mieux comprendre les
-        comportements de son enfant et faciliter le quotidien familial.
-      </p>
-    </section>
-
-    <section class="card" style="margin-top:18px;">
-      <h2>Tarifs</h2>
-      <ul>
-        <li>Entretien individuel préalable à l’inscription : <strong>50 €</strong></li>
-        <li>Programme complet : <strong>480 € par famille</strong> — 6 séances de groupe + supports visuels</li>
-        <li>Séance de rattrapage individuelle : <strong>50 €</strong></li>
-      </ul>
-    </section>
-
-    <section class="flyer" aria-label="Flyer de présentation">
-      <h2>Informations détaillées</h2>
-      <img src="flyer-barkley-molsheim.png"
-           alt="Flyer du programme Barkley à Molsheim, session automne-hiver 2026">
-    </section>
-
-    <section class="contact" id="contact">
-      <h2>Renseignements et inscriptions</h2>
-      <p>Vous souhaitez savoir si ce programme correspond à votre situation ? Contactez-nous.</p>
-
-      <div class="contacts">
-        <div class="person">
-          <h3>Lucile COATELEN</h3>
-          <a href="tel:+33671262411">06 71 26 24 11</a><br>
-          <a href="mailto:lucilec.psychomot@gmail.com">lucilec.psychomot@gmail.com</a>
-        </div>
-        <div class="person">
-          <h3>Elodie TURQUOIS</h3>
-          <a href="tel:+33617584076">06 17 58 40 76</a><br>
-          <a href="mailto:eturquois@psychomotricite.com">eturquois@psychomotricite.com</a>
-        </div>
+  <section id="programme">
+    <h2>Le programme Barkley</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Comprendre</h3>
+        <p>Mieux comprendre les mécanismes qui peuvent être à l'origine des difficultés rencontrées au quotidien.</p>
       </div>
-    </section>
-  </main>
+      <div class="card">
+        <h3>Expérimenter</h3>
+        <p>Découvrir des outils et des stratégies concrètes, applicables dans les situations de la vie quotidienne.</p>
+      </div>
+      <div class="card">
+        <h3>Accompagner</h3>
+        <p>Construire progressivement des réponses adaptées aux besoins de son enfant et de sa famille.</p>
+      </div>
+    </div>
+  </section>
 
-  <footer>
-    Programme Barkley à Molsheim · Habiletés parentales · Molsheim et environs
-  </footer>
+  <section>
+    <h2>Une démarche professionnelle</h2>
+    <p>
+      Le programme s'appuie sur une approche structurée de l'accompagnement
+      parental et sur les connaissances actuelles concernant les difficultés
+      attentionnelles, l'impulsivité et les fonctions exécutives.
+    </p>
+    <p>
+      Notre objectif est de proposer aux parents un cadre clair, bienveillant
+      et concret, tout en respectant la singularité de chaque enfant et de
+      chaque famille.
+    </p>
+  </section>
+
+  <section id="inscriptions" class="contact">
+    <h2>Renseignements et inscriptions</h2>
+    <p>
+      Pour connaître les prochaines dates, les modalités du programme et les
+      conditions d'inscription, vous pouvez nous contacter directement.
+    </p>
+    <p><strong>Programme Barkley – Molsheim et alentours</strong></p>
+    <p>
+      Les coordonnées et modalités d'inscription seront indiquées ici.
+    </p>
+  </section>
+</main>
+
+<footer>
+  Programme Barkley – Accompagnement parental · Molsheim et alentours
+</footer>
+
 </body>
 </html>
