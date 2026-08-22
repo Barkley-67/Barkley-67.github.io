@@ -3,361 +3,895 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Lucile Coatelen & Élodie Turquois – Programme Barkley 67 | Bas-Rhin  </title>
-  <meta name="description" content="Programme Barkley d'accompagnement parental dans le Bas-Rhin. Lucile Coatelen et Élodie Turquois, psychomotriciennes formées à l'approche Barkley. Molsheim, Strasbourg et alentours.">
-<style>
+
+  <title>COATELEN Lucile et TURQUOIS Elodie - Programme Barkley – Accompagnement parental - Bas-Rhin - 67 - Strasbourg - Molsheim</title>
+
+  <meta name="description" content="Programme Barkley d'accompagnement parental dans le Bas-Rhin. Lucile Coatelen et Élodie Turquois, psychomotriciennes diplômées d'État formées à l'approche Barkley, proposent un programme à Molsheim, à proximité de Strasbourg 67.">
+
+  <style>
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       color: #26384a;
-      background: #fbfdfb;
+      background: #fffefa;
       line-height: 1.6;
     }
 
+    /* =========================
+       COULEURS
+       ========================= */
+
+    :root {
+      --bleu: #1557b0;
+      --bleu-clair: #3f9bea;
+      --bleu-tres-clair: #eaf7fc;
+      --vert: #6db447;
+      --vert-clair: #e9f8dc;
+      --vert-tres-clair: #f2fbe9;
+      --creme: #fffefa;
+      --texte: #26384a;
+      --blanc: #ffffff;
+    }
+
+    /* =========================
+       MENU
+       ========================= */
+
     header {
       background: rgba(255, 255, 255, 0.96);
-      padding: 18px 7%;
+      padding: 18px 5%;
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 20;
       box-shadow: 0 2px 12px rgba(30, 90, 130, 0.08);
     }
 
     nav {
+      max-width: 1180px;
+      margin: auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 20px;
-      max-width: 1100px;
-      margin: auto;
+      gap: 25px;
     }
 
     nav strong {
-      font-size: 1.25rem;
-      color: #174ea6;
+      color: var(--bleu);
+      font-size: 1.35rem;
+      line-height: 1.2;
+    }
+
+    nav div {
+      display: flex;
+      align-items: center;
+      gap: 24px;
     }
 
     nav a {
-      color: #1769aa;
+      color: var(--bleu);
       text-decoration: none;
-      margin-left: 18px;
       font-weight: 600;
+      font-size: 0.98rem;
     }
 
     nav a:hover {
       color: #079fbd;
     }
 
+    .nav-button {
+      background: var(--vert-clair);
+      color: #477d32 !important;
+      padding: 10px 18px;
+      border-radius: 999px;
+    }
+
+    /* =========================
+       CONTENU GENERAL
+       ========================= */
+
+    main {
+      overflow: hidden;
+    }
+
+    .container {
+      max-width: 1180px;
+      margin: auto;
+      padding: 0 5%;
+    }
+
+    /* =========================
+       HERO
+       ========================= */
+
     .hero {
-      max-width: 1100px;
+      max-width: 1180px;
       margin: 35px auto 25px;
-      padding: 55px 7%;
-      background: #eaf7fb;
-      border-radius: 45px 85px 55px 75px;
-      box-shadow: 0 4px 20px rgba(50, 140, 180, 0.08);
+      padding: 55px 5%;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 55px;
+      align-items: center;
+      background: var(--creme);
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      left: -80px;
+      top: 10px;
+      width: 58%;
+      height: 92%;
+      background: var(--bleu-tres-clair);
+      border-radius: 40% 60% 55% 45% / 35% 45% 55% 65%;
+      z-index: 0;
+    }
+
+    .hero-left,
+    .hero-right {
+      position: relative;
+      z-index: 1;
     }
 
     .hero h1 {
-      font-size: clamp(2rem, 5vw, 3.4rem);
-      line-height: 1.15;
-      margin: 0 0 18px;
-      color: #174ea6;
+      margin: 0 0 20px;
+      color: var(--bleu);
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      line-height: 1.08;
+      letter-spacing: -1px;
     }
 
-    .hero p {
-      font-size: 1.15rem;
-      max-width: 760px;
+    .hero h1 span {
+      color: #079fbd;
+    }
+
+    .hero-text {
+      font-size: 1.08rem;
+      max-width: 600px;
+      margin-bottom: 20px;
+    }
+
+    .location-line {
+      color: var(--vert);
+      font-weight: 600;
+      margin: 18px 0;
     }
 
     .button {
       display: inline-block;
-      margin-top: 12px;
-      padding: 14px 24px;
+      margin-top: 10px;
+      padding: 14px 25px;
       border-radius: 999px;
-      background: #3f9bea;
+      background: var(--bleu-clair);
       color: white;
       text-decoration: none;
       font-weight: bold;
-      box-shadow: 0 4px 12px rgba(63, 155, 234, 0.22);
+      box-shadow: 0 5px 14px rgba(63, 155, 234, 0.22);
     }
 
     .button:hover {
-      background: #178fbd;
+      background: #168dbd;
     }
+
+    /* =========================
+       BLOCS PRATIQUES
+       ========================= */
+
+    .info-card {
+      background: var(--vert-tres-clair);
+      border-radius: 30px;
+      padding: 25px 30px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 16px rgba(100, 160, 90, 0.07);
+    }
+
+    .info-card h3 {
+      color: var(--bleu);
+      margin: 0 0 8px;
+      font-size: 1.35rem;
+    }
+
+    .info-card p {
+      margin: 4px 0;
+    }
+
+    .info-icon {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--vert);
+      font-size: 1.5rem;
+      float: left;
+      margin-right: 15px;
+    }
+
+    /* =========================
+       SECTIONS
+       ========================= */
 
     section {
-      max-width: 1100px;
+      max-width: 1180px;
       margin: 0 auto;
-      padding: 55px 7%;
+      padding: 55px 5%;
     }
 
-    h2 {
-      color: #174ea6;
-      font-size: 2rem;
+    section h2 {
+      color: var(--bleu);
+      font-size: 2.25rem;
+      line-height: 1.2;
       margin-top: 0;
     }
 
-    .intro {
-      background: #f1fae9;
+    .section-intro {
+      max-width: 850px;
+    }
+
+    /* =========================
+       POUR QUI
+       ========================= */
+
+    .pour-qui {
+      background: var(--vert-tres-clair);
       border-radius: 55px 30px 65px 35px;
-      box-shadow: 0 3px 18px rgba(100, 160, 90, 0.08);
+      position: relative;
+      box-shadow: 0 4px 18px rgba(100, 160, 90, 0.07);
+    }
+
+    .pour-qui::after {
+      content: "";
+      position: absolute;
+      right: -35px;
+      bottom: -25px;
+      width: 150px;
+      height: 100px;
+      background: #cde9fa;
+      border-radius: 70% 30% 60% 40%;
+      z-index: 0;
+    }
+
+    .pour-qui-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* =========================
+       PROGRAMME
+       ========================= */
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: var(--vert-tres-clair);
+      border: 1px solid #e2f1d7;
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: 0 3px 15px rgba(90, 150, 80, 0.06);
+    }
+
+    .card h3 {
+      color: var(--bleu);
+      margin-top: 0;
+      font-size: 1.3rem;
+    }
+
+    /* =========================
+       QUI SOMMES-NOUS
+       ========================= */
+
+    .intro {
+      background: var(--bleu-tres-clair);
+      border-radius: 45px 30px 55px 35px;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .intro-text {
+      padding-right: 10px;
+    }
+
+    .intro-text strong {
+      color: var(--vert);
     }
 
     .professionnelles {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 28px;
-      margin-top: 28px;
+      gap: 18px;
     }
 
     .personne {
-      background: #ffffff;
-      border-radius: 30px;
-      padding: 24px;
-      box-shadow: 0 3px 16px rgba(50, 120, 150, 0.08);
+      background: white;
+      border-radius: 28px;
+      padding: 18px;
       text-align: center;
+      box-shadow: 0 3px 15px rgba(50, 120, 150, 0.08);
     }
 
     .personne img {
-      width: 180px;
+      width: 100%;
+      max-width: 190px;
       height: 220px;
       object-fit: cover;
-      border-radius: 24px;
+      border-radius: 22px;
       display: block;
-      margin: 0 auto 18px;
+      margin: 0 auto 15px;
     }
 
     .personne h3 {
-      margin: 8px 0 4px;
-      color: #174ea6;
-      font-size: 1.35rem;
+      color: var(--bleu);
+      margin: 8px 0;
+      font-size: 1.25rem;
     }
 
     .badge {
       display: inline-block;
-      margin: 12px 0;
-      padding: 8px 14px;
+      padding: 7px 12px;
       border-radius: 999px;
-      background: #e2f6d5;
-      color: #4c8f35;
+      background: var(--vert-clair);
+      color: #4d8d37;
       font-weight: 600;
+      font-size: 0.88rem;
     }
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+    /* =========================
+       TARIFS
+       ========================= */
+
+    .tarifs-title {
+      text-align: center;
+      margin-bottom: 20px;
     }
 
-    .card {
-      background: #f3fae9;
-      border-radius: 28px;
-      padding: 26px;
+    .tarifs {
+      background: var(--vert-tres-clair);
+      border-radius: 40px;
+      padding: 25px 40px;
+      max-width: 980px;
+      margin: auto;
       box-shadow: 0 3px 15px rgba(90, 150, 80, 0.07);
-      border: 1px solid #e1f2d6;
     }
 
-    .card h3 {
-      color: #174ea6;
+    .tarif {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 30px;
+      padding: 16px 0;
+      border-bottom: 1px solid #d9ebcc;
     }
+
+    .tarif:last-child {
+      border-bottom: none;
+    }
+
+    .tarif strong {
+      color: var(--bleu);
+      font-size: 1.15rem;
+    }
+
+    .prix {
+      color: var(--bleu);
+      font-weight: bold;
+      font-size: 1.25rem;
+      white-space: nowrap;
+    }
+
+    /* =========================
+       CONTACT
+       ========================= */
 
     .contact {
-      background: #eaf7fb;
-      border-radius: 35px 65px 40px 60px;
-      box-shadow: 0 3px 18px rgba(50, 140, 180, 0.07);
+      background: var(--bleu-tres-clair);
+      border-radius: 45px 65px 40px 60px;
     }
+
+    .contacts-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+      margin-top: 25px;
+    }
+
+    .contact-person {
+      background: white;
+      border-radius: 25px;
+      padding: 25px;
+    }
+
+    .contact-person h3 {
+      color: var(--bleu);
+      margin-top: 0;
+    }
+
+    .contact-person a {
+      color: var(--bleu);
+      text-decoration: none;
+    }
+
+    /* =========================
+       FOOTER
+       ========================= */
 
     footer {
       text-align: center;
-      padding: 30px 7%;
-      background: #174ea6;
+      padding: 28px 5%;
+      background: var(--bleu);
       color: white;
+      margin-top: 30px;
     }
 
-    @media (max-width: 750px) {
-      .professionnelles,
-      .cards {
-        grid-template-columns: 1fr;
-      }
+    /* =========================
+       MOBILE
+       ========================= */
+
+    @media (max-width: 850px) {
 
       nav {
         flex-direction: column;
       }
 
+      nav div {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+      }
+
       nav a {
-        margin: 0 8px;
+        margin: 0 5px;
       }
 
       .hero {
+        grid-template-columns: 1fr;
+        gap: 25px;
         margin: 20px 12px;
-        padding: 40px 7%;
+        padding: 45px 7%;
+      }
+
+      .hero::before {
+        width: 100%;
+        left: -10%;
+      }
+
+      .intro {
+        grid-template-columns: 1fr;
+        margin: 0 12px;
+      }
+
+      .professionnelles {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .contacts-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+
+      .hero h1 {
+        font-size: 2.35rem;
       }
 
       section {
-        padding: 40px 7%;
+        padding: 42px 6%;
+      }
+
+      .professionnelles {
+        grid-template-columns: 1fr;
+      }
+
+      .personne img {
+        max-width: 180px;
+      }
+
+      .tarifs {
+        padding: 20px;
+      }
+
+      .tarif {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+
+      .prix {
+        white-space: normal;
+      }
+
+      .info-card {
+        padding: 22px;
       }
     }
   </style>
 </head>
+
 <body>
 
 <header>
   <nav>
-    <strong>Programme Barkley</strong>
+    <strong>Programme Barkley<br><span style="color:#079fbd;">pour les parents</span></strong>
+
     <div>
       <a href="#programme">Le programme</a>
       <a href="#equipe">Qui sommes-nous ?</a>
       <a href="#inscriptions">Renseignements</a>
+      <a class="nav-button" href="#inscriptions">Nous contacter</a>
     </div>
   </nav>
 </header>
 
 <main>
+
+  <!-- =========================
+       ACCUEIL
+       ========================= -->
+
   <div class="hero">
-    <h1>Programme Barkley<br>pour les parents</h1>
-    <p>
-      Un accompagnement parental structuré pour mieux comprendre les difficultés
-      de l'enfant et développer des stratégies concrètes au quotidien.
-      Le programme est proposé à Molsheim et dans les environs.
-    </p>
-    <a class="button" href="#inscriptions">Renseignements et inscriptions</a>
+
+    <div class="hero-left">
+
+      <h1>
+        Développer des outils concrets et comprendre les difficultés de comportement de son enfant.
+      </h1>
+
+      <p class="hero-text">
+        Un accompagnement parental structuré pour mieux comprendre les difficultés
+        de l'enfant et développer des stratégies concrètes au quotidien.
+      </p>
+
+      <p class="location-line">
+        📍 Molsheim et les environs · Bas-Rhin (67)
+      </p>
+
+      <a class="button" href="#programme">
+        Découvrir le programme →
+      </a>
+
+    </div>
+
+    <div class="hero-right">
+
+      <div class="info-card">
+        <div class="info-icon">⌖</div>
+        <h3>Où et comment ?</h3>
+        <p>Molsheim – cabinet de psychomotricité</p>
+        <p>6 séances de 2h</p>
+        <p>par quinzaine en semaines paires</p>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon">▣</div>
+        <h3>Quand ?</h3>
+        <p>Démarrage le 2 octobre 2026</p>
+        <p>Les vendredis de 17h à 19h</p>
+      </div>
+
+    </div>
   </div>
 
-  <section id="equipe" class="intro">
-    <h2>Qui sommes-nous ?</h2>
-    <p>
-      Nous sommes deux <strong>psychomotriciennes diplômées d'État</strong>,
-      formées à l'<strong>approche Barkley</strong>.
-    </p>
-    <p>
-      <strong>Programme Barkley dans le Bas-Rhin</strong><br>
-      Lucile Coatelen et Élodie Turquois, psychomotriciennes diplômées d'État
-      et formées à l'approche Barkley, proposent un programme d'accompagnement
-      parental à Molsheim, à proximité de Strasbourg, dans le Bas-Rhin (67).
-    </p>
 
-    <p>
-      Nous avons choisi de proposer ce programme avec une volonté simple :
-      offrir aux parents un accompagnement sérieux, structuré et concret,
-      fondé sur les connaissances actuelles et les recommandations de bonnes
-      pratiques professionnelles.
-    </p>
+  <!-- =========================
+       POUR QUI
+       ========================= -->
+
+  <section class="pour-qui">
+
+    <div class="pour-qui-content">
+
+      <h2>Pour qui ?</h2>
+
+      <p>
+        Pour les parents d'enfants présentant des difficultés d'attention,
+        d'impulsivité, d'opposition, avec ou sans diagnostic posé.
+        Des stratégies concrètes pour un quotidien plus serein.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       QUI SOMMES-NOUS
+       ========================= -->
+
+  <section id="equipe" class="intro">
+
+    <div class="intro-text">
+
+      <h2>Qui sommes-nous ?</h2>
+
+      <p>
+        Nous sommes deux <strong>psychomotriciennes diplômées d'État</strong>,
+        formées à l'<strong>approche Barkley</strong>.
+      </p>
+
+      <p>
+        <strong>Programme Barkley dans le Bas-Rhin</strong><br>
+        Lucile Coatelen et Élodie Turquois, psychomotriciennes diplômées d'État
+        et formées à l'approche Barkley, proposent un programme d'accompagnement
+        parental à Molsheim, à proximité de Strasbourg, dans le Bas-Rhin (67).
+      </p>
+
+      <p>
+        Nous avons choisi de proposer ce programme avec une volonté simple :
+        offrir aux parents un accompagnement sérieux, structuré et concret,
+        fondé sur les connaissances actuelles et les recommandations de bonnes
+        pratiques professionnelles.
+      </p>
+
+    </div>
+
 
     <div class="professionnelles">
-      <article class="personne">
-        <img src="photo-lucile.jpg" alt="Lucile, psychomotricienne diplômée d'État">
-        <h3>Lucile</h3>
-        <span class="badge">Psychomotricienne diplômée d'État</span>
-        <p>Formée à l'approche Barkley.</p>
-      </article>
 
       <article class="personne">
-        <img src="photo-elodie.jpeg" alt="Élodie, psychomotricienne diplômée d'État">
-        <h3>Élodie</h3>
-        <span class="badge">Psychomotricienne diplômée d'État</span>
-        <p>Formée à l'approche Barkley.</p>
+
+        <img
+          src="photo-lucile.jpg"
+          alt="Lucile Coatelen, psychomotricienne diplômée d'État"
+        >
+
+        <h3>Lucile Coatelen</h3>
+
+        <span class="badge">
+          Psychomotricienne diplômée d'État
+        </span>
+
+        <p>
+          Formée à l'approche Barkley.
+        </p>
+
       </article>
+
+
+      <article class="personne">
+
+        <img
+          src="photo-elodie.jpeg"
+          alt="Élodie Turquois, psychomotricienne diplômée d'État"
+        >
+
+        <h3>Élodie Turquois</h3>
+
+        <span class="badge">
+          Psychomotricienne diplômée d'État
+        </span>
+
+        <p>
+          Formée à l'approche Barkley.
+        </p>
+
+      </article>
+
     </div>
+
   </section>
+
+
+  <!-- =========================
+       PROGRAMME
+       ========================= -->
 
   <section id="programme">
-    <h2>Le programme Barkley</h2>
+
+    <h2>Le programme Barkley pour les parents</h2>
+
+    <p class="section-intro">
+      Le programme propose un accompagnement parental structuré autour de
+      stratégies concrètes et applicables dans les situations du quotidien.
+    </p>
+
     <div class="cards">
+
       <div class="card">
+
         <h3>Comprendre</h3>
-        <p>Mieux comprendre les mécanismes qui peuvent être à l'origine des difficultés rencontrées au quotidien.</p>
+
+        <p>
+          Mieux comprendre les mécanismes qui peuvent être à l'origine
+          des difficultés rencontrées au quotidien.
+        </p>
+
       </div>
+
+
       <div class="card">
+
         <h3>Expérimenter</h3>
-        <p>Découvrir des outils et des stratégies concrètes, applicables dans les situations de la vie quotidienne.</p>
+
+        <p>
+          Découvrir des outils et des stratégies concrètes, applicables
+          dans les situations de la vie quotidienne.
+        </p>
+
       </div>
+
+
       <div class="card">
+
         <h3>Accompagner</h3>
-        <p>Construire progressivement des réponses adaptées aux besoins de son enfant et de sa famille.</p>
+
+        <p>
+          Construire progressivement des réponses adaptées aux besoins
+          de son enfant et de sa famille.
+        </p>
+
       </div>
+
     </div>
+
   </section>
+
+
+  <!-- =========================
+       DEMARCHE
+       ========================= -->
 
   <section>
+
     <h2>Une démarche professionnelle</h2>
+
     <p>
-      Le programme s'appuie sur une approche structurée de l'accompagnement
-      parental et sur les connaissances actuelles concernant les difficultés
-      attentionnelles, l'impulsivité et les fonctions exécutives.
+      Le programme Barkley est un programme structuré d'accompagnement parental
+      destiné aux parents d'enfants présentant des difficultés attentionnelles,
+      d'impulsivité ou d'opposition.
     </p>
+
     <p>
-      Notre objectif est de proposer aux parents un cadre clair, bienveillant
-      et concret, tout en respectant la singularité de chaque enfant et de
-      chaque famille.
+      Il propose des stratégies concrètes pour mieux comprendre les difficultés
+      de l'enfant et favoriser des changements durables dans le quotidien familial.
     </p>
+
+    <p>
+      Proposé à Molsheim, à proximité de Strasbourg, ce programme s'adresse
+      aux familles du Bas-Rhin et plus largement d'Alsace qui souhaitent
+      bénéficier d'un accompagnement parental structuré et concret.
+    </p>
+
   </section>
 
- <section id="inscriptions" class="contact">
-  <h2>Renseignements et inscriptions</h2>
 
-  <h3>Lieu et modalités</h3>
-  <p>
-    <strong>Molsheim – cabinet de psychomotricité</strong><br>
-    6 séances de 2 h en groupe
-  </p>
+  <!-- =========================
+       TARIFS
+       ========================= -->
 
-  <h3>Dates</h3>
-  <p>
-    <strong>Démarrage le 2 octobre 2026</strong><br>
-    Les vendredis de 17 h à 19 h, une semaine sur deux,
-    en semaines paires.
-  </p>
+  <section>
 
-  <h3>Pour qui ?</h3>
-  <p>
-    Ce programme s’adresse aux parents d’enfants présentant des difficultés
-    d’attention, d’impulsivité ou d’opposition, avec ou sans diagnostic posé.
-  </p>
-  <p>
-    Il propose des <strong>stratégies concrètes et adaptées</strong> pour
-    mieux comprendre les difficultés rencontrées et favoriser un quotidien
-    plus serein.
-  </p>
+    <h2 class="tarifs-title">Tarifs</h2>
 
-  <h3>Tarifs</h3>
-  <p>
-    <strong>Entretien individuel préalable à l'inscription : 50 €</strong><br>
-    Présentation du programme et identification des besoins.
-  </p>
+    <div class="tarifs">
 
-  <p>
-    <strong>Programme complet : 480 € par famille</strong><br>
-    6 séances de groupe de 2 h + supports visuels<br>
-    <em>Soit 80 € par séance de 2 h.</em>
-  </p>
+      <div class="tarif">
 
-  <p>
-    <strong>Séance de rattrapage individuelle : 50 €</strong>
-  </p>
+        <div>
+          <strong>Entretien individuel préalable à l'inscription</strong>
+          <br>
+          Pour présenter le programme et cibler les besoins.
+        </div>
 
-  <h3>Renseignements et inscriptions</h3>
+        <div class="prix">
+          50 €
+        </div>
 
-  <p>
-    <strong>Lucile COATELEN – Psychomotricienne</strong><br>
-    06 71 26 24 11<br>
-    lucilec.psychomot@gmail.com
-  </p>
+      </div>
 
-  <p>
-    <strong>Elodie TURQUOIS – Psychomotricienne</strong><br>
-    06 17 58 40 76<br>
-    eturquois@psychomotricite.com
-  </p>
-</section> 
+
+      <div class="tarif">
+
+        <div>
+          <strong>Programme complet</strong>
+          <br>
+          6 séances de groupe + supports visuels
+        </div>
+
+        <div class="prix">
+          480 € par famille
+          <br>
+          <small>(80 € par séance de 2h)</small>
+        </div>
+
+      </div>
+
+
+      <div class="tarif">
+
+        <div>
+          <strong>Séance de rattrapage individuelle</strong>
+        </div>
+
+        <div class="prix">
+          50 €
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       INSCRIPTIONS
+       ========================= -->
+
+  <section id="inscriptions" class="contact">
+
+    <h2>Renseignements et inscriptions</h2>
+
+    <p>
+      Pour toute question concernant le programme, son déroulement ou
+      les modalités d'inscription, n'hésitez pas à nous contacter.
+    </p>
+
+    <div class="contacts-grid">
+
+      <div class="contact-person">
+
+        <h3>Lucile COATELEN</h3>
+
+        <p>
+          📞 <a href="tel:0671262411">06 71 26 24 11</a>
+        </p>
+
+        <p>
+          ✉️
+          <a href="mailto:lucilec.psychomot@gmail.com">
+            lucilec.psychomot@gmail.com
+          </a>
+        </p>
+
+      </div>
+
+
+      <div class="contact-person">
+
+        <h3>Élodie TURQUOIS</h3>
+
+        <p>
+          📞 <a href="tel:0617584076">06 17 58 40 76</a>
+        </p>
+
+        <p>
+          ✉️
+          <a href="mailto:eturquois@psychomotricite.com">
+            eturquois@psychomotricite.com
+          </a>
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
 </main>
 
+
 <footer>
-  Programme Barkley – Accompagnement parental · Molsheim et alentours
+  Programme Barkley pour les parents · Molsheim · Strasbourg · Bas-Rhin (67)
 </footer>
+
 
 </body>
 </html>
