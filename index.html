@@ -5,23 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> Lucile Coatelen & Élodie Turquois – Programme Barkley 67 | Bas-Rhin  </title>
   <meta name="description" content="Programme Barkley d'accompagnement parental dans le Bas-Rhin. Lucile Coatelen et Élodie Turquois, psychomotriciennes formées à l'approche Barkley. Molsheim, Strasbourg et alentours.">
-  <style>
-    * { box-sizing: border-box; }
+<style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      color: #263238;
-      background: #f7faf9;
+      color: #26384a;
+      background: #fbfdfb;
       line-height: 1.6;
     }
+
     header {
-      background: white;
+      background: rgba(255, 255, 255, 0.96);
       padding: 18px 7%;
       position: sticky;
       top: 0;
       z-index: 10;
-      box-shadow: 0 1px 8px rgba(0,0,0,.08);
+      box-shadow: 0 2px 12px rgba(30, 90, 130, 0.08);
     }
+
     nav {
       display: flex;
       justify-content: space-between;
@@ -30,110 +35,171 @@
       max-width: 1100px;
       margin: auto;
     }
-    nav strong { font-size: 1.15rem; }
+
+    nav strong {
+      font-size: 1.25rem;
+      color: #174ea6;
+    }
+
     nav a {
-      color: #355c57;
+      color: #1769aa;
       text-decoration: none;
       margin-left: 18px;
       font-weight: 600;
     }
+
+    nav a:hover {
+      color: #079fbd;
+    }
+
     .hero {
       max-width: 1100px;
-      margin: 45px auto 25px;
-      padding: 45px 7%;
-      background: #e8f1ef;
-      border-radius: 24px;
+      margin: 35px auto 25px;
+      padding: 55px 7%;
+      background: #eaf7fb;
+      border-radius: 45px 85px 55px 75px;
+      box-shadow: 0 4px 20px rgba(50, 140, 180, 0.08);
     }
+
     .hero h1 {
       font-size: clamp(2rem, 5vw, 3.4rem);
       line-height: 1.15;
       margin: 0 0 18px;
-      color: #294f4a;
+      color: #174ea6;
     }
-    .hero p { font-size: 1.15rem; max-width: 760px; }
+
+    .hero p {
+      font-size: 1.15rem;
+      max-width: 760px;
+    }
+
     .button {
       display: inline-block;
       margin-top: 12px;
-      padding: 13px 22px;
+      padding: 14px 24px;
       border-radius: 999px;
-      background: #355c57;
+      background: #3f9bea;
       color: white;
       text-decoration: none;
       font-weight: bold;
+      box-shadow: 0 4px 12px rgba(63, 155, 234, 0.22);
     }
+
+    .button:hover {
+      background: #178fbd;
+    }
+
     section {
       max-width: 1100px;
       margin: 0 auto;
       padding: 55px 7%;
     }
+
     h2 {
-      color: #294f4a;
+      color: #174ea6;
       font-size: 2rem;
       margin-top: 0;
     }
+
     .intro {
-      background: white;
-      border-radius: 20px;
-      box-shadow: 0 2px 14px rgba(0,0,0,.06);
+      background: #f1fae9;
+      border-radius: 55px 30px 65px 35px;
+      box-shadow: 0 3px 18px rgba(100, 160, 90, 0.08);
     }
+
     .professionnelles {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 28px;
       margin-top: 28px;
     }
+
     .personne {
-      background: white;
-      border-radius: 20px;
+      background: #ffffff;
+      border-radius: 30px;
       padding: 24px;
-      box-shadow: 0 2px 14px rgba(0,0,0,.06);
+      box-shadow: 0 3px 16px rgba(50, 120, 150, 0.08);
       text-align: center;
     }
+
     .personne img {
       width: 180px;
       height: 220px;
       object-fit: cover;
-      border-radius: 18px;
+      border-radius: 24px;
       display: block;
       margin: 0 auto 18px;
     }
-    .personne h3 { margin: 8px 0 4px; color: #294f4a; }
+
+    .personne h3 {
+      margin: 8px 0 4px;
+      color: #174ea6;
+      font-size: 1.35rem;
+    }
+
     .badge {
       display: inline-block;
       margin: 12px 0;
-      padding: 7px 13px;
+      padding: 8px 14px;
       border-radius: 999px;
-      background: #edf4f2;
-      color: #355c57;
+      background: #e2f6d5;
+      color: #4c8f35;
       font-weight: 600;
     }
+
     .cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
+
     .card {
-      background: white;
-      border-radius: 18px;
-      padding: 24px;
-      box-shadow: 0 2px 14px rgba(0,0,0,.05);
+      background: #f3fae9;
+      border-radius: 28px;
+      padding: 26px;
+      box-shadow: 0 3px 15px rgba(90, 150, 80, 0.07);
+      border: 1px solid #e1f2d6;
     }
+
+    .card h3 {
+      color: #174ea6;
+    }
+
     .contact {
-      background: #e8f1ef;
-      border-radius: 24px;
+      background: #eaf7fb;
+      border-radius: 35px 65px 40px 60px;
+      box-shadow: 0 3px 18px rgba(50, 140, 180, 0.07);
     }
+
     footer {
       text-align: center;
       padding: 30px 7%;
-      background: #294f4a;
+      background: #174ea6;
       color: white;
     }
+
     @media (max-width: 750px) {
-      .professionnelles, .cards { grid-template-columns: 1fr; }
-      nav { flex-direction: column; }
-      nav a { margin: 0 8px; }
-      .hero { margin: 20px 12px; }
-      section { padding: 40px 7%; }
+      .professionnelles,
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 0 8px;
+      }
+
+      .hero {
+        margin: 20px 12px;
+        padding: 40px 7%;
+      }
+
+      section {
+        padding: 40px 7%;
+      }
     }
   </style>
 </head>
@@ -286,7 +352,7 @@
     06 17 58 40 76<br>
     eturquois@psychomotricite.com
   </p>
-</section>j'ai 
+</section> 
 </main>
 
 <footer>
